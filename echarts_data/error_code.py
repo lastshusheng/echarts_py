@@ -13,10 +13,10 @@ class ErrorCode(Enum):
 
 class ErrorCodeHelper:
     @classmethod
-    def transformErrorMsg(cls, errCode):
+    def transform_error_msg(cls, err_code):
         msg = ""
-        if errCode == ErrorCode.ParamsError:
+        if err_code == ErrorCode.ParamsError:
             msg = "参数错误"
-        elif errCode == ErrorCode.Success:
+        elif err_code == ErrorCode.Success:
             msg = "成功"
         return msg

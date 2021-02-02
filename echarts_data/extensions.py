@@ -7,7 +7,6 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_script import Manager
 
-
 db = SQLAlchemy()
 migrate = Migrate()
 manager = Manager()

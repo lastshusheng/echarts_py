@@ -93,4 +93,3 @@ def get_saved_data():
         'data': data
     }
     return ret(res)
-

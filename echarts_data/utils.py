@@ -52,7 +52,7 @@ def ret(data=None, err_code=ErrorCode.Success, msg=""):
     if data is None:
         data = {}
     if not msg:
-        result = {'data': data, 'errCode': err_code, 'msg': ErrorCodeHelper.transformErrorMsg(err_code)}
+        result = {'data': data, 'errCode': err_code, 'msg': ErrorCodeHelper.transform_error_msg(err_code)}
     else:
         result = {'data': data, 'errCode': err_code, 'msg': msg}
     response = Response(
@@ -71,14 +71,3 @@ def check_param_all(li: list) -> bool:
 def check_param_any(li: list) -> bool:
     """检查必传参数"""
     return any(map(lambda x: str(x) if x is not None else "", li))
-
-
-def get_page(pagination) -> dict:
-    res = {
-        "has_prev": pagination.has_prev,
-        "has_next": pagination.has_next,
-        "page": pagination.page,
-        "total_pages": pagination.pages,
-        "records": []
-    }
-    return res
