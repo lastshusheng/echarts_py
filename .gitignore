@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+env/
+migrations/
+.DS_Store
+.idea
+dev_manage.py
+*.log
+*.pid
+*.err
